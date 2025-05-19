@@ -1,0 +1,14 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+    enviroment:
+      - OPEN_WEATHER_API = ${OPEN_WEATHER_API}
+  client:
+    build: ./client
+    stdin_open: true
+    tty: true
+    depends_on:
+      - server
