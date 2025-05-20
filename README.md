@@ -4,6 +4,12 @@
 - 天気取得については `OpenWeatherMap` のAPIを使用している
 
 ## 実行手順
+### 注意
+`.env` ファイルを作成し、以下のようにして `OpenWeatherMap` APIキーの設定が必要
+```
+OPEN_WEATHER_API = "ここにAPIキー"
+```
+--- 
 1. コンテナイメージのビルド
 ```bash
 docker compose build
