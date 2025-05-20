@@ -5,4 +5,4 @@ COPY server.py /app/
 
 RUN pip install --no-cache-dir requests
 
-CMD ["python", "server.py"]
+CMD ["python", "-u", "server.py"]

@@ -32,6 +32,7 @@ def main():
         conn, addr = server.accept()
         print(f"接続: {addr}")
         city = conn.recv(1024).decode("utf-8")
+        print(f"受け取った地名: {city}")
         result = get_weather(city)
         conn.send(result.encode("utf-8"))
         conn.close()
